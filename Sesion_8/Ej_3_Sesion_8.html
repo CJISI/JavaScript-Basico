@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+        let palabras = []
+        let palabros = "hola,que,tal"
+        console.log(palabras)
+
+        function eliminarUltimo(lista) {
+            if (typeof lista !== 'object') {
+                return alert("Esto que me mandas no es un Array!")
+            }
+            
+            if (lista.length === 0){
+                return alert("Este Array está vacio")
+            }
+
+            lista.pop()
+            return lista
+        }
+
+        palabras = eliminarUltimo(palabras)
+        console.log(palabras)
+    </script>
+</body>
+
+</html>
