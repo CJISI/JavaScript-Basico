@@ -1,5 +1,4 @@
 class Figura {
-    _color = "";
     constructor(color) {
         this._color = color;
     }
@@ -9,6 +8,11 @@ class Figura {
     set setColor(color) {
         this._color = color;
     }
+
+    calcularArea() {
+        return -1
+    }
+
 }
 
 // let figura = new Figura('rojo')
