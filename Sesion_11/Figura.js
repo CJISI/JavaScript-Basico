@@ -8,3 +8,6 @@ class Figura {
         this._color = color;
     }
 }
+
+let figura = new Figura('rojo')
+console.log(figura.getColor)
