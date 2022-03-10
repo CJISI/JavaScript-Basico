@@ -1,0 +1,9 @@
+¿Qué beneficios nos trae el debugging?
+
+    Nos permite ejecutar pruebas que verificarán si el código está bien.
+    Nos permite obtener gran cantidad de información sobre la ejecución del programa.
+
+
+Indica cuál de los siguientes elementos son clave en el debugging.
+    
+    Las tres primeras respuestas son correctas
