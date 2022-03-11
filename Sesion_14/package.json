@@ -1,0 +1,14 @@
+{
+  "name": "sesion_14",
+  "version": "1.0.0",
+  "description": "En este ejercicio tendréis que crear una aplicación node con express que mostrará\r  una lista de nombres al entrar en una url en concreto.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  }
+}
