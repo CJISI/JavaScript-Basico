@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13 3</title>
+    <style>
+        body {
+            display: flex;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #forma {
+            display: flex;
+            background-color: red;
+            width: 400px;
+            height: 400px;
+            transition: 0.5s;
+            align-items: center;
+            justify-content: center;
+        }
+        #forma p{
+            background-color: white;
+            padding: 10px;
+            border-radius: 10%;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        Por último vamos a hacer un ejercicio que va a interactuar con un div en concreto.
+
+        El objetivo es crear un div cuadrado que cambie de color cuando hacen click sobre el y que cambie de forma a un
+        círculo al hacer doble click.
+
+        Recuerda que ya hemos visto una función que cambia el color de fondo en el primer ejercicio.
+     -->
+
+    <div id="forma"></div>
+    <script>
+        let forma = document.getElementById('forma')
+
+        function colorAleatorio() {
+            r = Math.round(Math.random() * (16 - 1)).toString(16)
+            g = Math.round(Math.random() * (16 - 1)).toString(16)
+            b = Math.round(Math.random() * (16 - 1)).toString(16)
+            return '#' + r + g + b
+        }
+
+        function inForma() {
+            forma.innerHTML = "<p>color: " + forma.style.backgroundColor + "<br>" + "radio: " +
+                forma.style.borderRadius + "</p>"
+        }
+
+        window.onload = () => {
+            forma.style.borderRadius = '0%'
+            inForma()
+
+            forma.addEventListener('click', () => {
+                forma.style.backgroundColor = colorAleatorio()
+                inForma()
+
+            })
+
+            forma.addEventListener('dblclick', () => {
+                if (forma.style.borderRadius === '0%') {
+                    forma.style.borderRadius = '50%'
+                    inForma()
+
+                } else {
+                    forma.style.borderRadius = '0%'
+                    inForma()
+
+                }
+            })
+
+        }
+    </script>
+</body>
+
+</html>
